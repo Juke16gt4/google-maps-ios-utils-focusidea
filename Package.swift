@@ -12,18 +12,16 @@ let package = Package(
             targets: ["GoogleMapsUtils"]
         )
     ],
-    dependencies: [
-        // GoogleMaps SDK 本体は CocoaPods 管理なのでここには書かない
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "GoogleMapsUtils",
-            path: "src"
+            path: "src"   // ソースコードのあるフォルダに合わせる
         ),
         .testTarget(
             name: "GoogleMapsUtilsTests",
             dependencies: ["GoogleMapsUtils"],
-            path: "tests"
+            path: "tests" // テストフォルダに合わせる
         )
     ]
 )
